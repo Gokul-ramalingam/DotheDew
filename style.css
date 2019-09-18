@@ -1,5 +1,7 @@
 :root{
     --color-1:red;
+    --color-2:yellowgreen;
+    --color-3:white;
 }
 .inner{
     height: 100vh;
@@ -24,11 +26,12 @@
     text-align: center;
     font-size:4em;
 }
-.instruction{
+#instruction{
     height: 20vh;
+    font-size: 4vw;
+    color: var(--color-2);
     width:100vw;
-    justify-content: center;
-    text-align: right;
+    text-align: right;   
 }
 .score{
     height: 50vh;
@@ -38,16 +41,25 @@
     display: flex;
 }
 .txt{
-    border-radius: 20px;
+    height:10vh;
+    width:40vh;
+    border-radius: 30px;
+    font-size:5vw;
+    margin-left: 3vw;
+    border-color: var(--color-1);
+    text-align: center;
 }
 .play{
     height: 30vh;
     width:100vw;
+    font-size:2em;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    display: inherit;
+    align-content: flex-start;
 }
 .start{
-    border-radius: 10px;
+    border-radius: 30px;
+    color: var(--color-1);
+    border-color: var(--color-1);
+    background-color: var(--color-3);
 }
