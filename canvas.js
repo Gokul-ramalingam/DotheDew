@@ -10,11 +10,12 @@ class Options{
     this.rockImage.src = 'images/rock.png';
     this.paperImage.src = 'images/paper.png'
     this.scissorImage.src = 'images/scissor.png'
+    // this.selectImage.src = 'images/select.png'
     onload=()=>{
         this.ctx.drawImage(this.rockImage,175,25,100,100);
         this.ctx.drawImage(this.paperImage,425,25,100,100);
         this.ctx.drawImage(this.scissorImage,670,25,100,100);
-        this.ctx.drawImage();
+        this.ctx.drawImage(this.scissorImage,425,400,100,100);
     }
     
 }
