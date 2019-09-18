@@ -24,3 +24,30 @@
     text-align: center;
     font-size:4em;
 }
+.instruction{
+    height: 20vh;
+    width:100vw;
+    justify-content: center;
+    text-align: right;
+}
+.score{
+    height: 50vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.txt{
+    border-radius: 20px;
+}
+.play{
+    height: 30vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inherit;
+}
+.start{
+    border-radius: 10px;
+}
