@@ -1,0 +1,9 @@
+body{
+    margin: 0%;
+}
+
+#game{
+    border: 5px solid rgb(9, 240, 124);
+    margin-left: 10%;
+    margin-top: 2%;
+}
