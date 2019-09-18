@@ -26,6 +26,7 @@
     text-align: center;
     font-size:4em;
 }
+/* instruction, score, start, play and text this is for home page */
 #instruction{
     height: 20vh;
     font-size: 4vw;
@@ -62,4 +63,20 @@
     color: var(--color-1);
     border-color: var(--color-1);
     background-color: var(--color-3);
+}
+/* this for last page */
+.full{
+    height: 100vh;
+    width: 100vw;
+    padding:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: var(--color-2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.greet{
+    height: 50vh;
+    
 }
