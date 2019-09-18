@@ -1,10 +1,29 @@
 body{
     margin: 0%;
+    display: flex;
 }
 
 #game{
     border: 5px solid rgb(9, 240, 124);
-    margin-left: 10%;
-    margin-top: 2%;
+    /* margin-left: 10%;
+    margin-top: 2%; */
 }
 
+#container{
+ height: 18vh;
+ width: 15vw;
+ border-radius: 4%;
+ margin-left: 2%;
+ margin-top: 2%;
+ background-color: #fAfAfA;
+ border:2px solid #FF362E;
+ text-align: center;
+}
+
+.title{
+font-size: 2vw;
+}
+
+.score{
+  font-size: 5vw;  
+}
