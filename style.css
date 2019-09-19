@@ -1,0 +1,131 @@
+:root{
+    --color-1:red;
+    --color-2:yellowgreen;
+    --color-3:white;
+    --color-4:rgb(252, 238, 238);
+}
+.inner{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.logo{
+    height: 70vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 2vh;
+}
+.name{
+    height: 30vh;
+    width:100vw;
+    color: var(--color-1);
+    justify-content: center;
+    align-items: center;
+    display: inherit;
+    text-align: center;
+    font-size:4em;
+}
+/* instruction, score, start, play and text this is for home page */
+.instruction{
+    height: 20vh;
+    font-size: 4vw;
+    color: var(--color-2);
+    width:100vw;
+    text-align: right;   
+}
+.score{
+    height: 50vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.txt{
+    border-radius: 30px;
+    font-size:5vw;
+    margin-left: 3vw;
+    border-color: var(--color-1);
+    text-align: center;
+}
+.play{
+    height: 30vh;
+    width:100vw;
+    font-size:2em;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+.start{
+    border-radius: 30px;
+    color: var(--color-1);
+    border-color: var(--color-1);
+    background-color: var(--color-4);
+    width: 20vw;
+}
+/* this is for instruction page */
+.close{
+    height: 5vh;
+    width: 100vw;
+    color: var(--color-1);
+    text-align: right;
+    font-size:2em;
+}
+.header{
+    height: 10vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--color-2);
+    font-size:3em;
+}
+.content{
+    height: 60vh;
+    width: 100vw;
+    display: inherit;
+    color: var(--color-2);
+    font-size:2em;
+}
+hr{
+    border: 1px solid var(--color-2);
+}
+/* this for last page */
+.full{
+    height: 100vh;
+    width: 100vw;
+    padding:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: var(--color-2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.up,.down{
+    height: 30vh;
+    width: 85vw;
+}
+.rect{
+    height: 40vh;
+    width: 60vw;
+    border-radius: 20px;
+    border-color: var(--color-1);
+    background-color: var(--color-4);
+}
+.greet{
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.emoji{
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 3em; 
+}
+
+
