@@ -12,11 +12,12 @@
         <div class="row">
             <div class="row"><span class="instruction"><a href="instruction.html">Instruction</span></a></div>
             <div class="row score">
-                <input type="text" class="txt" placeholder="Enter the winning score"/>
+                <input id='input' type="text" class="txt" placeholder="Enter the winning score" value="">
             </div>
         </div>
         <div class="row play">
-            <button class="start" onclick="location.href='canvas.html';localStorage.setItem('winScore',10)">Play</button>
+            <button class="start" onclick="location.href='canvas.html';localStorage.setItem('winScore',
+            document.getElementById('input').value)">Play</button>
         </div>
     </div>
 </body>
