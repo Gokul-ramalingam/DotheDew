@@ -1,8 +1,8 @@
 class Options{
     constructor(){
     this.canvas = document.getElementById('game');
-    this.canvas.width = 970;
-    this.canvas.height = 500;
+    this.canvas.width = 970+'vw';
+    this.canvas.height = 500+'vh';
     this.ctx = this.canvas.getContext('2d');
     this.rockImage =  new Image();
     this.paperImage  = new Image();
@@ -84,3 +84,15 @@ addEventListener("keydown",function(event){
 
 //    let points = document.getElementById('player').innerText;
 //    document.getElementById('player').innerHTML=1+parseInt(points);
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      document.body.style.backgroundColor = "yellow";
+    } else {
+     document.body.style.backgroundColor = "pink";
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
