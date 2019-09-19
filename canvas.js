@@ -46,7 +46,7 @@ class Options{
             }
     }
     this.validator = function(optionSelected,a,b){
-        this.random= Math.floor(Math.random()*3)+1;
+        this.random= generateRandomNumber();
             switch(this.random){
                 case a:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
                        break;
@@ -54,23 +54,6 @@ class Options{
                        break;
             }
          }
-        // else if(optionSelected == 2){
-        //     switch(this.random){
-        //         case 1:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
-        //                break;
-        //         case 3:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
-        //                break;
-        //     }
-        // }
-        // else if(optionSelected == 3)
-        // {
-        //     switch(this.random){
-        //         case 1:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
-        //                break;
-        //         case 2:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
-        //                break;
-        //     }  
-        // }
     }
 }
 
@@ -81,7 +64,7 @@ addEventListener("keydown",function(event){
    })
 
 
-
-//    let points = document.getElementById('player').innerText;
-//    document.getElementById('player').innerHTML=1+parseInt(points);
-
+   generateRandomNumber = function(optionSelected){
+    let rand = Math.floor(Math.random()*3)+1;
+    return rand===optionSelected?generateRandomNumber(optionSelected):rand;
+}
