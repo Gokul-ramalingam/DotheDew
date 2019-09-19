@@ -88,14 +88,12 @@
 }
 .greet{
     height: 10vh;
-    /* width: 50vw; */
     justify-content: center;
     align-items: center;
     display: flex;
 }
 .emoji{
     height: 30vh;
-    /* width: 50vw;  */
     justify-content: center;
     align-items: center;
     display: flex;
