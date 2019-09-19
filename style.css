@@ -42,8 +42,8 @@
     display: flex;
 }
 .txt{
-    height:10vh;
-    width:40vh;
+    /* height:10vh;
+    width:40vh; */
     border-radius: 30px;
     font-size:5vw;
     margin-left: 3vw;
@@ -76,7 +76,23 @@
     color: var(--color-2);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.greet{
-    height: 50vh;
-    
+.up,.down{
+    height: 30vh;
+    width: 85vw;
 }
+.greet{
+    height: 10vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.emoji{
+    height: 30vh;
+    width: 50vw; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 3em; 
+}
+
