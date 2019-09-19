@@ -14,7 +14,7 @@ ctx.drawImage(paper_image, 210, 20, 170, 130);
 }
 // this image for scissor
 scissor_image = new Image();
-scissor_image.src = '/images/scissor.png';
+scissor_image.src = 'images/scissor.png';
 scissor_image.onload = function(){
 ctx.drawImage(scissor_image, 400, 20, 170, 130);
 }
