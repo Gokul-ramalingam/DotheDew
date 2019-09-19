@@ -53,6 +53,10 @@ class Options{
                 case b:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
                        break;
             }
+            if(parseInt(document.getElementById('computer').innerText) === 5)
+                console.log("you lose")
+            else if(parseInt(document.getElementById('player').innerText) === 5)
+                document.getElementById('result').style.display='block';
          }
     }
 }
@@ -63,8 +67,9 @@ addEventListener("keydown",function(event){
     option.keyPress(event.keyCode);     
    })
 
-//    ar=[1,2,3];
+
     let generateRandomNumber = function(optionSelected){
     let rand = Math.floor(Math.random()*3)+1;
     return rand === optionSelected? generateRandomNumber(optionSelected) : rand;
 }
+

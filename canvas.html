@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DoTheDew</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="canvas.css">
 </head>
 <body>
     <canvas id="game">
     </canvas>
     <div id="container"><b class="title">Score</b><br><b class="score"><span id="player">0</span> : <span id="computer">0</span></b></div>
+    <div class="container-fluid inner">
+        <div class="row full">
+            <div class="row up"></div>
+            <div class="rect">
+                <div class="row greet">You Won!</div>
+                <div class="row emoji">🎉</div>
+            </div>
+            <div class="row down"></div>
+        </div>
 </body>
 <script src="canvas.js"></script>
 </html>
