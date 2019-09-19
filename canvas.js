@@ -53,9 +53,10 @@ class Options{
                 case b:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
                        break;
             }
-            if(parseInt(document.getElementById('computer').innerText) === 5)
+            console
+            if(parseInt(document.getElementById('computer').innerText) === parseInt(localStorage.getItem('winScore')))
                 console.log("you lose")
-            else if(parseInt(document.getElementById('player').innerText) === 5)
+            else if(parseInt(document.getElementById('player').innerText) === parseInt(localStorage.getItem('winScore')))
                location.href="last.html"
          }
     }
