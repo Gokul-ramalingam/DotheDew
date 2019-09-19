@@ -29,40 +29,58 @@ class Options{
        this.ctx.drawImage(this.scissorImage,670,25,100,100);
        this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
        
-       if(this.x == 175 && this.y==25)
+       if((this.x >= 150 && this.x<=200) && (this.y >=20 && this.y<=50 ))
        {  this.x = 425;
           this.y = 390;
-          this.validator(1);
+          this.validator(1,2,3);
         }
-       else if(this.x == 425 && this.y==25)
+       else if((this.x >= 400&& this.x <= 450) && (this.y >=20 && this.y<=50 ))
         {   this.x = 425;
             this.y = 390;
-            this.validator(2);
+            this.validator(2,1,3);
         }
-       else if(this.x == 670 && this.y==25){
+       else if((this.x >= 640 && this.x<=690) && (this.y >=20 && this.y<=50)){
              this.x = 425;
              this.y = 390;
-             this.validator(3);
+             this.validator(3,1,2);
             }
     }
-    this.validator = function(optionSelected){
+    this.validator = function(optionSelected,a,b){
         this.random= Math.floor(Math.random()*3)+1;
-        if(this.random==optionSelected){
-            let points = document.getElementById('player').innerText;
-            document.getElementById('player').innerHTML=1+parseInt(points);
+            switch(this.random){
+                case a:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
+                       break;
+                case b:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
+                       break;
+            }
          }
-         else{
-            let point = document.getElementById('computer').innerText;
-             document.getElementById('computer').innerHTML=1+parseInt(point);
-         }
+        // else if(optionSelected == 2){
+        //     switch(this.random){
+        //         case 1:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
+        //                break;
+        //         case 3:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
+        //                break;
+        //     }
+        // }
+        // else if(optionSelected == 3)
+        // {
+        //     switch(this.random){
+        //         case 1:document.getElementById('player').innerHTML=1+parseInt(document.getElementById('player').innerText);
+        //                break;
+        //         case 2:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
+        //                break;
+        //     }  
+        // }
     }
 }
 
-}
 let option = new Options();
 
 addEventListener("keydown",function(event){
     option.keyPress(event.keyCode);     
    })
 
-   console.log("here");
+
+
+//    let points = document.getElementById('player').innerText;
+//    document.getElementById('player').innerHTML=1+parseInt(points);
