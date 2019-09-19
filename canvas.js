@@ -56,7 +56,7 @@ class Options{
             if(parseInt(document.getElementById('computer').innerText) === 5)
                 console.log("you lose")
             else if(parseInt(document.getElementById('player').innerText) === 5)
-               console.log("you won!")
+               location.href="last.html"
          }
     }
 }
