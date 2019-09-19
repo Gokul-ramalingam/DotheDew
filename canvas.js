@@ -64,7 +64,7 @@ addEventListener("keydown",function(event){
    })
 
 //    ar=[1,2,3];
-   let generateRandomNumber = function(optionSelected){
+    let generateRandomNumber = function(optionSelected){
     let rand = Math.floor(Math.random()*3)+1;
     return rand === optionSelected? generateRandomNumber(optionSelected) : rand;
 }
