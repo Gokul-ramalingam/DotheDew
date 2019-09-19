@@ -46,7 +46,7 @@ class Options{
             }
     }
     this.validator = function(optionSelected,a,b){
-        this.random= generateRandomNumber();
+        this.random= generateRandomNumber(optionSelected);
             switch(this.random){
                 case a:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
                        break;
@@ -63,8 +63,8 @@ addEventListener("keydown",function(event){
     option.keyPress(event.keyCode);     
    })
 
-
-   generateRandomNumber = function(optionSelected){
+//    ar=[1,2,3];
+   let generateRandomNumber = function(optionSelected){
     let rand = Math.floor(Math.random()*3)+1;
-    return rand===optionSelected?generateRandomNumber(optionSelected):rand;
+    return rand === optionSelected? generateRandomNumber(optionSelected) : rand;
 }
