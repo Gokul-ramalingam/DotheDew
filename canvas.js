@@ -1,8 +1,8 @@
 class Options{
     constructor(){
     this.canvas = document.getElementById('game');
-    this.canvas.width = 970+'vw';
-    this.canvas.height = 500+'vh';
+    this.canvas.width = 570;
+    this.canvas.height = 400;
     this.ctx = this.canvas.getContext('2d');
     this.rockImage =  new Image();
     this.paperImage  = new Image();
@@ -13,36 +13,36 @@ class Options{
     this.scissorImage.src = 'images/scissor.png';
     this.selectImage.src = 'images/select.png';
     this.random = 0;
-    this.x = 425;
-    this.y = 390;
+    this.x = 220;
+    this.y = 300;
     onload=()=>{
-        this.ctx.drawImage(this.rockImage,175,25,100,100);
-        this.ctx.drawImage(this.paperImage,425,25,100,100);
-        this.ctx.drawImage(this.scissorImage,670,25,100,100);
+        this.ctx.drawImage(this.rockImage,10,25,100,100);
+        this.ctx.drawImage(this.paperImage,220,25,100,100);
+        this.ctx.drawImage(this.scissorImage,450,25,100,100);
         this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
     } 
     this.keyPress = function(e){
      e==37?this.x-=5:e==38?this.y-=5:e==39?this.x+=5:this.y+=5;
        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-       this.ctx.drawImage(this.rockImage,175,25,100,100);
-       this.ctx.drawImage(this.paperImage,425,25,100,100);
-       this.ctx.drawImage(this.scissorImage,670,25,100,100);
+       this.ctx.drawImage(this.rockImage,10,25,100,100);
+       this.ctx.drawImage(this.paperImage,220,25,100,100);
+       this.ctx.drawImage(this.scissorImage,450,25,100,100);
        this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
        
-       if((this.x >= 150 && this.x<=200) && (this.y >=20 && this.y<=50 ))
-       {  this.x = 425;
-          this.y = 390;
+       if((this.x >= 0 && this.x<=70) && (this.y >=20 && this.y<=50 ))
+       {  this.x = 220;
+          this.y = 300;
           this.validator(1,2,3);
         }
-       else if((this.x >= 400&& this.x <= 450) && (this.y >=20 && this.y<=50 ))
-        {   this.x = 425;
-            this.y = 390;
+       else if((this.x >= 200&& this.x <= 250) && (this.y >=20 && this.y<=50 ))
+        {   this.x = 220;
+            this.y = 300;
             this.validator(2,1,3);
         }
-       else if((this.x >= 640 && this.x<=690) && (this.y >=20 && this.y<=50)){
-             this.x = 425;
-             this.y = 390;
-             this.validator(3,1,2);
+       else if((this.x >= 430 && this.x<=470) && (this.y >=20 && this.y<=50)){
+            this.x = 220;
+            this.y = 300;
+            this.validator(3,1,2);
             }
     }
     this.validator = function(optionSelected,a,b){
@@ -85,14 +85,3 @@ addEventListener("keydown",function(event){
 //    let points = document.getElementById('player').innerText;
 //    document.getElementById('player').innerHTML=1+parseInt(points);
 
-function myFunction(x) {
-    if (x.matches) { // If media query matches
-      document.body.style.backgroundColor = "yellow";
-    } else {
-     document.body.style.backgroundColor = "pink";
-    }
-  }
-  
-  var x = window.matchMedia("(max-width: 700px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction) // Attach listener function on state changes
