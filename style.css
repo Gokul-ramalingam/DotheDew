@@ -59,6 +59,7 @@
 }
 .start{
     border-radius: 30px;
+    width: 20vw;
     color: var(--color-1);
     border-color: var(--color-1);
     background-color: var(--color-4);
