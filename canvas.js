@@ -12,7 +12,6 @@ class Options{
     this.paperImage.src = 'images/paper.png';
     this.scissorImage.src = 'images/scissor.png';
     this.selectImage.src = 'images/select.png';
-    this.optionSelected = 0;
     this.random = 0;
     this.x = 425;
     this.y = 390;
@@ -29,31 +28,33 @@ class Options{
        this.ctx.drawImage(this.paperImage,425,25,100,100);
        this.ctx.drawImage(this.scissorImage,670,25,100,100);
        this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
-       this.random= Math.floor(Math.random()*3)+1;
-       if(this.x == 175)
+       
+       if(this.x == 175 && this.y==25)
        {  this.x = 425;
           this.y = 390;
-          this.optionSelected = 1;
+          this.validator(1);
         }
-       else if(this.x == 425)
+       else if(this.x == 425 && this.y==25)
         {   this.x = 425;
             this.y = 390;
-            this.optionSelected = 2;
+            this.validator(2);
         }
-       else if(this.x == 670){
+       else if(this.x == 670 && this.y==25){
              this.x = 425;
              this.y = 390;
-             this.optionSelected = 3;
+             this.validator(3);
             }
-      if(this.random==this.optionSelected){
-         let points = document.getElementById('player').innerText;
-         document.getElementById('player').innerHTML=1+parseInt(points);
-         this.optionSelected=0;
-      }
-      else{
-         let point = document.getElementById('computer').innerText;
-          document.getElementById('computer').innerHTML=1+parseInt(point);
-      }
+    }
+    this.validator = function(optionSelected){
+        this.random= Math.floor(Math.random()*3)+1;
+        if(this.random==optionSelected){
+            let points = document.getElementById('player').innerText;
+            document.getElementById('player').innerHTML=1+parseInt(points);
+         }
+         else{
+            let point = document.getElementById('computer').innerText;
+             document.getElementById('computer').innerHTML=1+parseInt(point);
+         }
     }
 }
 
@@ -63,3 +64,5 @@ let option = new Options();
 addEventListener("keydown",function(event){
     option.keyPress(event.keyCode);     
    })
+
+   console.log("here");
