@@ -2,6 +2,7 @@
     --color-1:red;
     --color-2:yellowgreen;
     --color-3:white;
+    --color-4:rgb(252, 238, 238);
 }
 .inner{
     height: 100vh;
@@ -42,8 +43,6 @@
     display: flex;
 }
 .txt{
-    /* height:10vh;
-    width:40vh; */
     border-radius: 30px;
     font-size:5vw;
     margin-left: 3vw;
@@ -62,7 +61,7 @@
     border-radius: 30px;
     color: var(--color-1);
     border-color: var(--color-1);
-    background-color: var(--color-3);
+    background-color: var(--color-4);
 }
 /* this for last page */
 .full{
@@ -80,16 +79,23 @@
     height: 30vh;
     width: 85vw;
 }
+.rect{
+    height: 40vh;
+    width: 60vw;
+    border-radius: 20px;
+    border-color: var(--color-1);
+    background-color: var(--color-4);
+}
 .greet{
     height: 10vh;
-    width: 50vw;
+    /* width: 50vw; */
     justify-content: center;
     align-items: center;
     display: flex;
 }
 .emoji{
     height: 30vh;
-    width: 50vw; 
+    /* width: 50vw;  */
     justify-content: center;
     align-items: center;
     display: flex;
