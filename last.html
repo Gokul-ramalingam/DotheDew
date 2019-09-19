@@ -9,22 +9,20 @@
 </head>
 <body>
     <div class="container-fluid inner">
-        <div class="row full">
+        <div class="row full" id="win">
             <div class="row up"></div>
             <div class="rect">
                 <div class="row greet">You Won!</div>
                 <div class="row emoji">🎉</div>
             </div>
-
-            <div class="row full" id="loss">
-                <div class="row up"></div>
-                <div class="rect">
-                     <div class="row greet">You Loss!</div>
-                    <div class="row emoji">😔</div>
-                </div>
 </div>
 <script>
-    document.getElementById('loss').style.display='none';
+    if(localStorage.getItem('result') === 'loss')
+    {
+    console.log("win");
+    document.getElementsByClassName('greet')[0].innerHTML='You Loss!';
+    document.getElementsByClassName('emoji')[0].innerHTML='😔';
+    }
 </script>
 </body>
 </html>
