@@ -24,21 +24,24 @@ class Options{
        this.locationSpecifier();
        
        if((this.x >= 0 && this.x<=70) && (this.y >=20 && this.y<=50 ))
-       {  this.x = 220;
-          this.y = 300;
+       {  this.reset();
           this.validator(1,2,3);
         }
        else if((this.x >= 200&& this.x <= 250) && (this.y >=20 && this.y<=50 ))
-        {   this.x = 220;
-            this.y = 300;
+        {   
+            this.reset();
             this.validator(2,1,3);
         }
        else if((this.x >= 430 && this.x<=470) && (this.y >=20 && this.y<=50)){
-            this.x = 220;
-            this.y = 300;
+            this.reset();
             this.validator(3,1,2);
             }
     }
+    this.reset = function(){
+       this.x = 220;
+       this.y = 300;
+     }
+
     this.validator = function(optionSelected,a,b){
         this.random= generateRandomNumber(optionSelected);
             switch(this.random){
