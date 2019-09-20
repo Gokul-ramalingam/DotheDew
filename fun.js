@@ -15,7 +15,7 @@ class game{
     this.x = 230;
     this.y = 300;
     onload=()=>{
-      this.ctx.drawImage(this.bg_image, 0, 0, 600, 500);
+      this.ctx.drawImage(this.bg_image, 0, 0, this.canvas.width, this.canvas.height);
       this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
       this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
       this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
@@ -32,7 +32,7 @@ class game{
             this.y = this.y + 5;
           }
           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-          this.ctx.drawImage(this.bg_image, 0, 0, 600, 500);
+          this.ctx.drawImage(this.bg_image, 0, 0, this.canvas.width, this.canvas.height);
           this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
           this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
           this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
@@ -46,3 +46,5 @@ addEventListener("keydown", function(e){
   object.move(e.keyCode);
   // console.log("here");
 });
+
+   
