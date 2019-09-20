@@ -20,15 +20,18 @@ class game{
     }
     this.move = function(event) {
           if(event== 37) {//LEFT
-            this.x = this.x - 1;
+            this.x = this.x - 5;
           } else if(event == 38) {//UP
-            this.y = this.y - 1;
+            this.y = this.y - 5;
           } else if(event ==39) {//RIGHT
-            this.x = this.x + 1;
+            this.x = this.x + 5;
           } else if(event== 40) {//DOWN
-            this.y = this.y + 1;
+            this.y = this.y + 5;
           }
           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
+          this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
+          this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
           this.ctx.drawImage(this.point_image, this.x, this.y, 170, 150);
   }
 }
