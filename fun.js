@@ -3,6 +3,7 @@ class game{
   constructor(){
     this.canvas = document.getElementById("myCanvas");
     this.ctx = this.canvas.getContext("2d")
+    this.ctx.fillStyle = "skyblue"; 
     this.rock_image = new Image();
     this.rock_image.src = 'images/rock.png';
     this.paper_image = new Image();
@@ -14,6 +15,7 @@ class game{
     this.x = 230;
     this.y = 300;
     onload=()=>{
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
       this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
       this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
       this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
@@ -31,6 +33,7 @@ class game{
             this.y = this.y + 5;
           }
           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
           this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
           this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
           this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
