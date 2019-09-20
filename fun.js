@@ -2,6 +2,8 @@ class game{
   constructor(){
     this.canvas = document.getElementById("myCanvas");
     this.ctx = this.canvas.getContext("2d");
+    this.bg_image = new  image();
+    this.bg_image.src = 'images/background.jpg'
     this.rock_image = new Image();
     this.rock_image.src = 'images/rock.png';
     this.paper_image = new Image();
@@ -13,6 +15,7 @@ class game{
     this.x = 230;
     this.y = 300;
     onload=()=>{
+      this.ctx.drawImage(this.bg_image, 0, 0, 600, 500);
       this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
       this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
       this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
