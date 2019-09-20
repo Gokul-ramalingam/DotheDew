@@ -1,2 +1,4 @@
 # Appliction Name
-DotheDew
+DoTheDew
+## Design
+![Screenshot](Design.png)
