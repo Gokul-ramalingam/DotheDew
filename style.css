@@ -30,7 +30,7 @@
 /* instruction, score, start, play and text this is for home page */
 .instruction{
     height: 20vh;
-    font-size: 4vw;
+    font-size: 2vw;
     color: var(--color-2);
     width:100vw;
     text-align: right;   
@@ -40,11 +40,11 @@
     width:100vw;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: flex;   
 }
 .txt{
-    border-radius: 30px;
-    font-size:5vw;
+    border-radius: 50px;
+    font-size:2vw;
     margin-left: 3vw;
     border-color: var(--color-1);
     text-align: center;
@@ -59,7 +59,7 @@
 }
 .start{
     border-radius: 30px;
-    width: 20vw;
+    width: 15vw;
     color: var(--color-1);
     border-color: var(--color-1);
     background-color: var(--color-4);
