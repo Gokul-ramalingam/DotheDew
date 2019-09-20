@@ -50,13 +50,11 @@ class Options{
             
             if(parseInt(document.getElementById('computer').innerText) === parseInt(localStorage.getItem('winScore')))
             {  
-            localStorage.setItem('result','loss');
-            location.href="last.html";
+                  this.storeResult('loss');
             }
             else if(parseInt(document.getElementById('player').innerText) === parseInt(localStorage.getItem('winScore')))
                {
-                   localStorage.setItem('result','win');
-                   location.href="last.html"
+                   this.storeResult('win');
                }
          }
          this.locationSpecifier = function(){
@@ -64,6 +62,10 @@ class Options{
             this.ctx.drawImage(this.paperImage,220,25,100,100);
             this.ctx.drawImage(this.scissorImage,450,25,100,100);
             this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
+         }
+         this.storeResult=function(result){
+            localStorage.setItem('result',result);
+            location.href="last.html"; 
          }
     }
 }
@@ -80,3 +82,4 @@ addEventListener("keydown",function(event){
     return rand === optionSelected? generateRandomNumber(optionSelected) : rand;
 }
 
+/*here*/
