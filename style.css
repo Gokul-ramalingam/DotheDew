@@ -1,8 +1,11 @@
 :root{
     --color-1:#FF362E;
-    --color-2:#BADC57;
+    --color-2:#000000;
     --color-3:white;
     --color-4:rgb(252, 238, 238);
+}
+body{
+    background-color: #7DEEFE;
 }
 .inner{
     height: 100vh;
@@ -43,14 +46,17 @@
     display: flex;
 }
 .txt{
-    border-radius: 30px;
-    font-size:5vw;
+    /* border-radius: 20%; */
+    font-size:2.5vw;
+    height: 12vh;
+    width: 40vw;
     margin-left: 3vw;
     border-color: var(--color-1);
     text-align: center;
+    border-radius: 40px;
 }
 .play{
-    height: 30vh;
+    height: 100vh;
     width:100vw;
     font-size:2em;
     justify-content: center;
@@ -103,13 +109,13 @@ hr{
     color: var(--color-2);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.up,.down{
+/* .up,.down{
     height: 30vh;
     width: 85vw;
-}
+} */
 .rect{
     height: 40vh;
-    width: 60vw;
+    width: 40vw;
     border-radius: 20px;
     border-color: var(--color-1);
     background-color: var(--color-4);
@@ -119,13 +125,14 @@ hr{
     justify-content: center;
     align-items: center;
     display: flex;
+    color: #000000;
 }
 .emoji{
-    height: 30vh;
+    height: 25vh;
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 3em; 
+    font-size: 2.5em; 
 }
 
 
