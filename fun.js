@@ -3,7 +3,7 @@ class game{
     this.canvas = document.getElementById("myCanvas");
     this.ctx = this.canvas.getContext("2d");
     this.bg_image = new  image();
-    this.bg_image.src = 'images/background.jpg'
+    this.bg_image.src = 'images/background'
     this.rock_image = new Image();
     this.rock_image.src = 'images/rock.png';
     this.paper_image = new Image();
