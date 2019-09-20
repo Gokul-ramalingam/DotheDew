@@ -16,18 +16,12 @@ class Options{
     this.x = 220;
     this.y = 300;
     onload=()=>{
-        this.ctx.drawImage(this.rockImage,10,25,100,100);
-        this.ctx.drawImage(this.paperImage,220,25,100,100);
-        this.ctx.drawImage(this.scissorImage,450,25,100,100);
-        this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
+        this.locationSpecifier();
     } 
     this.keyPress = function(e){
      e==37?this.x-=5:e==38?this.y-=5:e==39?this.x+=5:this.y+=5;
        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-       this.ctx.drawImage(this.rockImage,10,25,100,100);
-       this.ctx.drawImage(this.paperImage,220,25,100,100);
-       this.ctx.drawImage(this.scissorImage,450,25,100,100);
-       this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
+       this.locationSpecifier();
        
        if((this.x >= 0 && this.x<=70) && (this.y >=20 && this.y<=50 ))
        {  this.x = 220;
@@ -64,6 +58,12 @@ class Options{
                    localStorage.setItem('result','win');
                    location.href="last.html"
                }
+         }
+         this.locationSpecifier = function(){
+            this.ctx.drawImage(this.rockImage,10,25,100,100);
+            this.ctx.drawImage(this.paperImage,220,25,100,100);
+            this.ctx.drawImage(this.scissorImage,450,25,100,100);
+            this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
          }
     }
 }
