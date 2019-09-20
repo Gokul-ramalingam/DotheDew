@@ -1,9 +1,8 @@
+// show all elements in the canvas
 class game{
   constructor(){
     this.canvas = document.getElementById("myCanvas");
-    this.ctx = this.canvas.getContext("2d");
-    this.bg_image = new  Image();
-    this.bg_image.src = 'images/background.jpg'
+    this.ctx = this.canvas.getContext("2d")
     this.rock_image = new Image();
     this.rock_image.src = 'images/rock.png';
     this.paper_image = new Image();
@@ -11,16 +10,16 @@ class game{
     this.scissor_image = new Image();
     this.scissor_image.src = 'images/scissor.png';
     this.point_image = new Image();
-    this.point_image.src = 'images/player.png';
+    this.point_image.src = 'images/point.png';
     this.x = 230;
     this.y = 300;
     onload=()=>{
-      this.ctx.drawImage(this.bg_image, 0, 0, this.canvas.width, this.canvas.height);
       this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
       this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
       this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
       this.ctx.drawImage(this.point_image, this.x, this.y, 170, 150);
     }
+    // Move object left,right,top and bottom
     this.move = function(event) {
           if(event== 37) {//LEFT
             this.x = this.x - 5;
@@ -32,7 +31,6 @@ class game{
             this.y = this.y + 5;
           }
           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-          this.ctx.drawImage(this.bg_image, 0, 0, this.canvas.width, this.canvas.height);
           this.ctx.drawImage(this.rock_image, 20, 20, 170, 130);
           this.ctx.drawImage(this.paper_image, 210, 20, 170, 130);
           this.ctx.drawImage(this.scissor_image, 400, 20, 170, 130);
