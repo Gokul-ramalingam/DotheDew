@@ -39,7 +39,7 @@ class Options{
         {   
             this.pokePick.play();
             this.reset();
-            this.validator(2,1,3);
+            this.validator(2,3,1);
         }
        else if((this.x >= 430 && this.x<=470) && (this.y >=20 && this.y<=50)){
             this.pokePick.play();
@@ -55,6 +55,7 @@ class Options{
 
     this.validator = function(optionSelected,a,b){
         this.random = generateRandomNumber(optionSelected);
+        this.imageModifier(this.random);
             switch(this.random){
                 case a:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
                        break;
@@ -80,6 +81,12 @@ class Options{
          this.storeResult=function(result){
             localStorage.setItem('result',result);
             location.href="last.html"; 
+         }
+         this.imageModifier = function(randomNumber){
+             console.log(randomNumber);
+           randomNumber===1?document.getElementById("random").src="images/rock.png":
+           randomNumber===2?document.getElementById("random").src="images/paper.png":
+           document.getElementById("random").src="images/scissor.png";
          }
     }
 }
