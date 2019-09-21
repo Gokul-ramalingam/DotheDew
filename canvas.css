@@ -4,7 +4,7 @@ body{
 }
 
 #game{
-    border: 5px solid rgb(9, 240, 124);
+    border: 5px solid #000000;
     /* margin-left: 10%;
     margin-top: 2%; */
 }
@@ -33,6 +33,10 @@ position: relative;
 #random{
   height: 10vh;
   position: absolute;
-  margin-top: -1%;
-  margin-left: 10%;
+  /* margin-top: -1%; */
+  margin-left: 0%;
+}
+
+#lable{
+  font-size: 1vw;
 }

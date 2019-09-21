@@ -1,7 +1,7 @@
 :root{
     --color-1:#FF362E;
     --color-2:#000000;
-    --color-3:white;
+    --color-3:#ffffff;
     --color-4:rgb(252, 238, 238);
 }
 body{
@@ -12,13 +12,17 @@ body{
     width: 100vw;
     overflow: hidden;
 }
+.main{
+    align-items: center;
+    justify-content: center;
+}
 .logo{
-    height: 70vh;
-    width:100vw;
+
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 2vh;
+    margin-top: 25vh;
+
 }
 .name{
     height: 30vh;
@@ -30,6 +34,9 @@ body{
     text-align: center;
     font-size:4vw;
     cursor: pointer;
+}
+.name:hover{
+  color: #000000;
 }
 /* instruction, score, start, play and text this is for home page */
 .instruction{
@@ -65,17 +72,21 @@ body{
     justify-content: center;
     align-items: center;
     align-content: flex-start;
-    outline: none;
+    outline:0 none;
 }
 .start{
     border-radius: 30px;
     color: var(--color-1);
-    border-color: var(--color-1);
-    background-color: var(--color-4);
+    background-color: #7DEEFE;
     width: 12vw;
-    height:10vh;
-    outline: none;
+    height:9vh;
+    outline:0 none;
+    border: 3px solid var(--color-1);
 }
+.start:hover{
+    background-color: var(--color-4);
+}
+.start:focus {outline:0;}
 /* this is for instruction page */
 .close{
     height: 5vh;
@@ -99,7 +110,7 @@ body{
     width: 100vw;
     display: inherit;
     color: var(--color-2);
-    font-size:2em;
+    font-size:4vh;
 }
 hr{
     border: 1px solid var(--color-2);
