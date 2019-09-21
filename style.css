@@ -1,0 +1,156 @@
+:root{
+    --color-1:#FF362E;
+    --color-2:#000000;
+    --color-3:#ffffff;
+    --color-4:rgb(252, 238, 238);
+}
+body{
+    background-color: #7DEEFE;
+}
+.inner{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.main{
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 25vh;
+
+}
+.name{
+    height: 30vh;
+    width:100vw;
+    color: var(--color-1);
+    justify-content: center;
+    align-items: center;
+    display: inherit;
+    text-align: center;
+    font-size:4vw;
+    cursor: pointer;
+}
+.name:hover{
+  color: #000000;
+}
+/* instruction, score, start, play and text this is for home page */
+.instruction{
+    height: 20vh;
+    font-size: 3vw;
+    color: var(--color-2);
+    width:100vw;
+    text-align: right; 
+    cursor: pointer;  
+}
+.score{
+    height: 50vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.txt{
+    /* border-radius: 20%; */
+    font-size:2.5vw;
+    height: 12vh;
+    width: 40vw;
+    margin-left: 3vw;
+    border-color: var(--color-1);
+    text-align: center;
+    border-radius: 40px;
+    outline: none;
+}
+.play{
+    /* height: 100vh;
+    width:100vw; */
+    font-size:2em;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    outline:0 none;
+}
+.start{
+    border-radius: 30px;
+    color: var(--color-1);
+    background-color: #7DEEFE;
+    width: 12vw;
+    height:9vh;
+    outline:0 none;
+    border: 3px solid var(--color-1);
+}
+.start:hover{
+    background-color: var(--color-4);
+}
+.start:focus {outline:0;}
+/* this is for instruction page */
+.close{
+    height: 5vh;
+    width: 100vw;
+    color: var(--color-1);
+    text-align: right;
+    font-size:2vw;
+    cursor: pointer;
+}
+.header{
+    height: 10vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--color-2);
+    font-size:3em;
+}
+.content{
+    height: 60vh;
+    width: 100vw;
+    display: inherit;
+    color: var(--color-2);
+    font-size:4vh;
+}
+hr{
+    border: 1px solid var(--color-2);
+}
+/* this for last page */
+.full{
+    height: 100vh;
+    width: 100vw;
+    padding:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: var(--color-2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* .up,.down{
+    height: 30vh;
+    width: 85vw;
+} */
+.rect{
+    height: 40vh;
+    width: 40vw;
+    border-radius: 20px;
+    border-color: var(--color-1);
+    background-color: var(--color-4);
+}
+.greet{
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #000000;
+}
+.emoji{
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 10vw; 
+}
+
+
