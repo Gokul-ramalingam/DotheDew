@@ -13,11 +13,12 @@ This repository consists of a canvas based rock-paper-scissor game. Players can 
 * JavaScript ES6
 
 ## Design
-![sceenshoot](Web 1920 – 1.png)
-![sceenshoot](Web 1920 – 2.png)
-![sceenshoot](Web 1920 – 3.png)
-![sceenshoot](Web 1920 – 4.png)
-![sceenshoot](Web 1920 – 5.png)
+![screenshot](one.png)
+![screenshot](two.png)
+![screenshot](three.png)
+![screenshot](four.png)
+![screenshot](five.png)
+![screenshot](six.png)
 
 ## Preview
 
