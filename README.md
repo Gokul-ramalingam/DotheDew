@@ -11,4 +11,5 @@ This project is rock-paper-scissor game. First player select the target score an
 ## Design
 ![sceenshoot](.png)
 ## Preview
+Video:https://drive.google.com/open?id=13PdeilRnjPQgL33awB4FyPJNYvysFVUZ
 
