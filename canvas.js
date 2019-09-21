@@ -54,7 +54,7 @@ class Options{
      }
 
     this.validator = function(optionSelected,a,b){
-        this.random = generateRandomNumber(optionSelected);
+        this.random = this.generateRandomNumber(optionSelected);
         this.imageModifier(this.random);
             switch(this.random){
                 case a:document.getElementById('computer').innerHTML=1+parseInt(document.getElementById('computer').innerText);
@@ -88,17 +88,18 @@ class Options{
            randomNumber===2?document.getElementById("random").src="images/paper.png":
            document.getElementById("random").src="images/scissor.png";
          }
+         this.generateRandomNumber = function(optionSelected){
+            this.rand = Math.floor(Math.random()*3)+1;
+            return this.rand === optionSelected? this.generateRandomNumber(optionSelected) : this.rand;
+        }
     }
 }
 
 let option = new Options();
 
 addEventListener("keydown",function(event){
+    if(event.keyCode==37||event.keyCode==38||event.keyCode==39||event.keyCode==40)
     option.keyPress(event.keyCode);     
    })
 
 
-    let generateRandomNumber = function(optionSelected){
-    let rand = Math.floor(Math.random()*3)+1;
-    return rand === optionSelected? generateRandomNumber(optionSelected) : rand;
-}

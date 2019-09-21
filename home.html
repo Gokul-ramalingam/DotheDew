@@ -10,15 +10,26 @@
 <body>
     <div class="container-fluid inner">
         <div class="row">
-            <div class="row"><span class="instruction"><a href="instruction.html">Instruction</span></a></div>
+            <div class="row"><span class="instruction" onclick="location.href='instruction.html'">Instructions</span></div>
             <div class="row score">
                 <input id='input' type="text" class="txt" placeholder="Enter your target score" value="">
             </div>
         </div>
         <div class="row play">
-            <button class="start" onclick="location.href='canvas.html';localStorage.setItem('winScore',
-            document.getElementById('input').value)">Play</button>
+            <button class="start" onclick="checkInput()">Play</button>
         </div>
     </div>
 </body>
+<script>
+   let checkInput = function(){
+        console.log(document.getElementById('input').value);
+        if(document.getElementById('input').value >0){
+        location.href='canvas.html';localStorage.setItem('winScore',
+        document.getElementById('input').value);
+        }
+        else{
+            alert("Enter target value greater than 0");
+        }
+    }
+</script>
 </html>
