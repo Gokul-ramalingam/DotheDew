@@ -17,7 +17,7 @@ class Options{
     this.random = 0;
     this.x = 220;
     this.y = 300;
-    this.pokePick = new Audio("pickup.mp3");
+    this.pokePick = new Audio("sounds/pickup.mp3");
     this.pokePick.volume = 0.8;
     onload=()=>{
         this.locationSpecifier();
