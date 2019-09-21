@@ -1,28 +1,42 @@
 body{
     margin: 0%;
+    /* padding: 0%; */
 }
 
 #game{
-    border: 5px solid rgb(9, 240, 124);
+    border: 5px solid #000000;
     /* margin-left: 10%;
     margin-top: 2%; */
 }
 
 #container{
- height: 18vh;
- width: 15vw;
+ height: 20vh;
+ width: 30vw;
  border-radius: 4%;
- margin-left: 13%;
+ margin-left: 2%;
  margin-top: 2%;
  background-color: #fAfAfA;
  border:2px solid #FF362E;
- text-align: center;
 }
 
 .title{
+margin-left: 8%;
 font-size: 2vw;
+position: relative;
 }
 
 .score{
-  font-size: 5vw;  
+  font-size: 5vw; 
+  line-height: 10vh; 
+}
+
+#random{
+  height: 10vh;
+  position: absolute;
+  /* margin-top: -1%; */
+  margin-left: 0%;
+}
+
+#lable{
+  font-size: 1vw;
 }
