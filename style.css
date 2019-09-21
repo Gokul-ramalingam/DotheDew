@@ -28,7 +28,8 @@ body{
     align-items: center;
     display: inherit;
     text-align: center;
-    font-size:4em;
+    font-size:4vw;
+    cursor: pointer;
 }
 /* instruction, score, start, play and text this is for home page */
 .instruction{
