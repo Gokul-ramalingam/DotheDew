@@ -23,7 +23,7 @@ class Options{
         this.locationSpecifier();
     } 
 
-    this.keyPress = function(e){
+    this.keyPress = (e)=>{
      e==37?this.x-=5:e==38?this.y-=5:e==39?this.x+=5:this.y+=5;
        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
@@ -47,13 +47,13 @@ class Options{
             this.validator(3,1,2);
             }
     }
-       this.reset = function(){
+       this.reset = ()=>{
        this.x = 220;
        this.y = 300;
     //    this.pokePick.pause();
      }
 
-    this.validator = function(optionSelected,a,b){
+    this.validator = (optionSelected,a,b)=>{
         this.random = this.generateRandomNumber(optionSelected);
         this.imageModifier(this.random);
             switch(this.random){
@@ -72,23 +72,23 @@ class Options{
                    this.storeResult('win');
                }
          }
-         this.locationSpecifier = function(){
+         this.locationSpecifier = ()=>{
             this.ctx.drawImage(this.rockImage,10,25,100,100);
             this.ctx.drawImage(this.paperImage,220,25,100,100);
             this.ctx.drawImage(this.scissorImage,450,25,100,100);
             this.ctx.drawImage(this.selectImage,this.x,this.y,100,100);
          }
-         this.storeResult=function(result){
+         this.storeResult=(result)=>{
             localStorage.setItem('result',result);
             location.href="last.html"; 
          }
-         this.imageModifier = function(randomNumber){
+         this.imageModifier = (randomNumber)=>{
              console.log(randomNumber);
            randomNumber===1?document.getElementById("random").src="images/rock.png":
            randomNumber===2?document.getElementById("random").src="images/paper.png":
            document.getElementById("random").src="images/scissor.png";
          }
-         this.generateRandomNumber = function(optionSelected){
+         this.generateRandomNumber = (optionSelected)=>{
             this.rand = Math.floor(Math.random()*3)+1;
             return this.rand === optionSelected? this.generateRandomNumber(optionSelected) : this.rand;
         }
@@ -97,7 +97,7 @@ class Options{
 
 let option = new Options();
 
-addEventListener("keydown",function(event){
+addEventListener("keydown",(event)=>{
     if(event.keyCode==37||event.keyCode==38||event.keyCode==39||event.keyCode==40)
     option.keyPress(event.keyCode);     
    })
