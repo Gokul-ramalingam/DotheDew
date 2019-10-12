@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <title>Result Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid inner">
+        <div class="row full" id="win">
+            <div class="row up"></div>
+            <div class="rect">
+                <div class="row greet">You Won!</div>
+                <div class="row emoji">🎉</div>
+            </div>
+</div>
+<script>
+    if(localStorage.getItem('result') === 'loss')
+    {
+    console.log("win");
+    document.getElementsByClassName('greet')[0].innerHTML='You Loss!';
+    document.getElementsByClassName('emoji')[0].innerHTML='😔';
+    }
+</script>
+</body>
+</html>
